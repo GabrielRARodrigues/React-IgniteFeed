@@ -1,3 +1,4 @@
+import { Header } from './components/Header'
 import { Post } from './components/Post'
 
 import './global.css'
@@ -5,6 +6,7 @@ import './global.css'
 export function App() {
   return (
     <div>
+      <Header />
       <Post
         author="Gabriel Rodrigues"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non itaque beatae? Ullam sapiente nesciunt nam inventore eius explicabo ipsa unde illum impedit possimus quidem vitae sequi voluptatibus, iste rerum."

@@ -4,9 +4,9 @@ import styles from './App.module.css'
 
 import { Header } from './components/Header'
 import { Sidebar } from './components/Sidebar'
-import { Post, PostProps } from './components/Post'
+import { Post, IPost } from './components/Post'
 
-interface Post extends PostProps {
+interface Post extends IPost {
   id: number
 }
 
@@ -78,14 +78,7 @@ export function App() {
         <Sidebar />
         <main>
           {posts.map(post => {
-            return (
-              <Post
-                key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
-              />
-            )
+            return <Post key={post.id} post={post} />
           })}
         </main>
       </div>
